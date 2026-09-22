@@ -1,0 +1,2 @@
+# Cloudflare Pages resolves clean/extensionless URLs and slug/index.html natively.
+# No redirects needed at this stage of the build.
