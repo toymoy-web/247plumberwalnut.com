@@ -230,3 +230,43 @@ footer .wrap.footer-legal{display:block;padding-top:18px;border-top:1px solid va
 .hero-photo{border-radius:20px;overflow:hidden;box-shadow:0 20px 44px rgba(30,42,51,.18)}
 .hero-photo img{width:100%;height:100%;object-fit:cover;display:block;border-radius:20px}
 @media(max-width:900px){.page-banner img{max-height:260px}}
+
+/* Paragraph + heading rhythm for content columns (service, location, hub, utility pages).
+   The global reset zeroes margins, so body copy had no gaps. Scoped with child selectors so
+   card/FAQ/factor internals keep their own spacing. */
+.twocol > div:first-child > p,
+.sec > .wrap > p{margin:0 0 18px;line-height:1.75}
+.twocol > div:first-child > p:last-child,
+.sec > .wrap > p:last-child{margin-bottom:0}
+.twocol > div:first-child > h2,
+.sec > .wrap > h2{font-size:28px;line-height:1.25;margin:44px 0 16px}
+.twocol > div:first-child > h2:first-child,
+.sec > .wrap > h2:first-child{margin-top:0}
+.twocol > div:first-child > .boxgrid,
+.twocol > div:first-child > .factors,
+.twocol > div:first-child > .compare,
+.twocol > div:first-child > .faq,
+.twocol > div:first-child > .rel,
+.sec > .wrap > .hubgrid,
+.sec > .wrap > .contactgrid{margin:0 0 8px}
+.twocol > div:first-child > .midcta{margin:32px 0}
+.twocol > div:first-child > ul{margin:0 0 18px 22px;line-height:1.75}
+.twocol > div:first-child > p + .boxgrid,
+.twocol > div:first-child > p + .factors,
+.twocol > div:first-child > p + .compare{margin-top:4px}
+.sign h3{margin-bottom:6px}
+.sign p,.factor{line-height:1.6}
+.hubcard h3{margin-bottom:8px}
+@media(max-width:900px){
+  .twocol > div:first-child > h2,.sec > .wrap > h2{font-size:24px;margin:36px 0 14px}
+}
+/* Homepage section headings follow a .kick label and keep their original rhythm */
+.sec > .wrap > .kick + h2{font-size:38px;line-height:1.2;margin:10px 0 34px}
+@media(max-width:900px){.sec > .wrap > .kick + h2{font-size:30px;margin:10px 0 24px}}
+
+/* Footer social links */
+footer .wrap.footer-social{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:24px}
+.footer-social h3{margin:0 4px 0 0;font-size:15px}
+.footer-social .social-links{display:flex;flex-wrap:wrap;gap:8px}
+.footer-social .social-links a{display:inline-block;margin:0;padding:11px 16px;border:1px solid var(--line);border-radius:999px;font-weight:600;font-size:13px;line-height:1;color:var(--ink)}
+.footer-social .social-links a:hover{border-color:var(--copper);color:var(--copper)}
