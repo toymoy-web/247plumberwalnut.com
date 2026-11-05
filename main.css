@@ -270,3 +270,7 @@ footer .wrap.footer-social{display:flex;flex-wrap:wrap;align-items:center;gap:12
 .footer-social .social-links{display:flex;flex-wrap:wrap;gap:8px}
 .footer-social .social-links a{display:inline-block;margin:0;padding:11px 16px;border:1px solid var(--line);border-radius:999px;font-weight:600;font-size:13px;line-height:1;color:var(--ink)}
 .footer-social .social-links a:hover{border-color:var(--copper);color:var(--copper)}
+
+/* 320px footer fix: single column on very narrow screens */
+@media(max-width:380px){footer .wrap:not(.footer-legal):not(.footer-social){grid-template-columns:1fr}}
+@media(max-width:380px){.hubgrid.blogindex{grid-template-columns:1fr}}
